@@ -1,0 +1,20 @@
+2025-10-17 14:53:34,929 - root - ERROR - Invalid input
+2025-10-17 14:53:34,929 - root - ERROR - File not made yet
+2025-10-17 14:53:52,595 - root - ERROR - Invalid input
+2025-10-17 14:54:06,589 - root - INFO - Encrypted text written to output.txt
+2025-10-17 14:54:06,590 - root - INFO - encoding successful
+2025-10-17 14:54:31,203 - root - ERROR - Invalid input
+2025-10-17 14:54:33,007 - root - INFO - Encrypted text written to output.txt
+2025-10-17 14:54:33,008 - root - INFO - encoding successful
+2025-10-17 14:59:09,162 - root - ERROR - Invalid input
+2025-10-17 14:59:09,162 - root - INFO - Decryption text written in output.txt
+2025-10-17 14:59:09,162 - root - INFO - decoding successful
+2025-10-17 15:01:39,374 - root - ERROR - Invalid input
+2025-10-17 15:01:43,184 - root - INFO - Empty Encrypted Text
+2025-10-17 15:05:33,242 - root - ERROR - Invalid input
+2025-10-17 15:05:34,291 - root - ERROR - Empty Encrypted Text
+2025-10-17 15:09:59,309 - root - ERROR - Invalid input
+2025-10-17 15:09:59,727 - root - INFO - encoding successful
+2025-10-17 15:10:15,010 - root - ERROR - Invalid input
+2025-10-17 15:10:17,517 - root - INFO - Encrypted text written to output.txt
+2025-10-17 15:10:17,517 - root - INFO - encoding successful
