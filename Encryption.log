@@ -21,3 +21,19 @@
 2025-10-18 19:28:09,115 - root - ERROR - Invalid input
 2025-10-18 19:28:11,261 - root - INFO - Encrypted text written to output.txt
 2025-10-18 19:28:11,261 - root - INFO - encoding successful
+2025-10-18 20:13:28,958 - root - ERROR - Invalid input
+2025-10-18 20:13:40,606 - root - ERROR - Encoding error symbol not in dictionary
+2025-10-18 20:13:40,606 - root - INFO - Encrypted text written to output.txt
+2025-10-18 20:13:40,607 - root - INFO - encoding successful
+2025-10-18 20:14:40,708 - root - ERROR - Invalid input
+2025-10-18 20:14:46,145 - root - ERROR - Encoding error symbol not in dictionary
+2025-10-18 20:14:46,146 - root - INFO - Encrypted text written to output.txt
+2025-10-18 20:14:46,146 - root - INFO - encoding successful
+2025-10-18 20:16:05,102 - root - ERROR - Invalid input
+2025-10-18 20:16:10,381 - root - ERROR - Encoding error symbol not in dictionary
+2025-10-18 20:16:10,381 - root - INFO - encoding successful
+2025-10-18 20:17:59,891 - root - ERROR - Invalid input
+2025-10-18 20:18:03,593 - root - ERROR - Invalid character entered in output.txt
+2025-10-18 20:18:03,593 - root - INFO - encoding successful
+2025-10-18 20:18:32,870 - root - ERROR - Invalid input
+2025-10-18 20:18:35,907 - root - ERROR - Invalid character entered in output.txt

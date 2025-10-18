@@ -53,6 +53,7 @@ def decoding():
                 output += DECODE_MAP[num_int]
             else:
                 output += "?"
+                logging.warning("The input number '{}' is not a valid number.".format(num_str))
         except ValueError:
             output += num_str
 
@@ -71,6 +72,7 @@ def encoding(user_input):
     :param user_input: the user input as a string
     :return: None
     """
+
     output = []
     if user_input == "":
         with open(FILE, "w", encoding="utf-8") as f: #handles empty input
@@ -78,10 +80,14 @@ def encoding(user_input):
             logging.warning("Empty text written in output.txt")
             return
     for char in user_input:
+
         if char in ENCODING_MAPPING:
             output.append(str(ENCODING_MAPPING[char]))
         else:
-            output.append(char)
+            print("Not a valid character entered")
+            logging.error("Invalid character inputted")
+            sys.exit()
+
     encrypted_text = ','.join(output)
 
     with open(FILE, "w", encoding="utf-8") as f:
