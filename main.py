@@ -1,5 +1,19 @@
 ﻿import sys
 import logging
+"""
+Final Python Project-
+Made: 2025
+By: Omer Attia
+
+The program asks wether the user wants to encrypt or decrypt if the user chooses to decrypt
+it will ask for the user to input a prompt it will then translate that prompt via the dictionary
+and write the encryption in a file called 'output.txt' if the user asks to decrypt it will 
+decrypt the message in the file.
+The program returns:
+    A file called 'output.txt' containing the encrypted message.
+    or the same file called 'output.txt' with the decrypted message of the message that used
+    to be in 'output.txt'.
+"""
 #Logging config
 logging.basicConfig(filename="Encryption.log", level=logging.INFO,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 FILE = "output.txt"
@@ -19,6 +33,12 @@ encoding_map = {
 # Reverses the dictionary we used to encode stuff
 decode_map = {v: k for k, v in encoding_map.items()}
 def decoding():
+    """
+    Takes the message in 'output.txt' as input and prints the decrypted message.
+    In 'output.txt' the message will be written to the file called 'output.txt'.
+    :param  
+    :return: prints the decrypted message in the file 'output.txt'. 
+    """""
     with open(FILE, "r", encoding="utf-8") as f:
         file_input = f.read()
     nums = file_input.split(",")
@@ -45,6 +65,12 @@ def decoding():
 
 
 def encoding(user_input):
+    """
+    This program recieves the user input runs it through the dictionary encrypts it and 
+    prints the encrypted message in the file 'output.txt'.
+    :param user_input:
+    :return: 
+    """""
     output = []
     if user_input == "":
         with open(FILE, "w", encoding="utf-8") as f:
