@@ -68,7 +68,7 @@ def encoding(user_input):
     """
     This program recieves the user input runs it through the dictionary encrypts it and 
     prints the encrypted message in the file 'output.txt'.
-    :param user_input:
+    :param user_input: string
     :return: 
     """""
     output = []
@@ -95,7 +95,7 @@ def main():
         sys.exit()
     
     #sets the file
-    user_decision = sys.argv[1] # sets the mode
+    user_decision = sys.argv[1] # sets the mode Encryption or Decryption
     assert user_decision in ("Encrypt","Decrypt"), "Invalid input (must be Encrypt or Decrypt)"
     logging.error("Invalid input")
     if user_decision == "Decrypt":#checks if dec is equal to "Decrypt"
