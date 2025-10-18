@@ -68,7 +68,7 @@ def encoding(user_input):
     """
     This program recieves the user input runs it through the dictionary encrypts it and 
     prints the encrypted message in the file 'output.txt'.
-    :param user_input: string
+    :param user_input: the user input as a string
     :return: None
     """
     output = []
