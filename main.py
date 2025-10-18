@@ -116,6 +116,7 @@ def main():
         user_input = input()
         encoding(user_input)
         logging.info("encoding successful")
+        print("Encoded text written to output.txt")
 if __name__ == "__main__":
     main()
 
