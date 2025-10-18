@@ -5,7 +5,7 @@ Final Python Project-
 Made: 2025
 By: Omer Attia
 
-The program asks wether the user wants to encrypt or decrypt if the user chooses to decrypt
+The program asks whether the user wants to encrypt or decrypt if the user chooses to decrypt
 it will ask for the user to input a prompt it will then translate that prompt via the dictionary
 and write the encryption in a file called 'output.txt' if the user asks to decrypt it will 
 decrypt the message in the file.
@@ -36,9 +36,9 @@ def decoding():
     """
     Takes the message in 'output.txt' as input and prints the decrypted message.
     In 'output.txt' the message will be written to the file called 'output.txt'.
-    :param  
-    :return: prints the decrypted message in the file 'output.txt'. 
-    """""
+    :param
+    :return: None
+    """
     with open(FILE, "r", encoding="utf-8") as f:
         file_input = f.read()
     nums = file_input.split(",")
@@ -69,13 +69,13 @@ def encoding(user_input):
     This program recieves the user input runs it through the dictionary encrypts it and 
     prints the encrypted message in the file 'output.txt'.
     :param user_input: string
-    :return: 
-    """""
+    :return: None
+    """
     output = []
     if user_input == "":
         with open(FILE, "w", encoding="utf-8") as f: #handles empty input
             f.write("")
-            logging.warn("Empty text written in output.txt")
+            logging.warning("Empty text written in output.txt")
             return
     for char in user_input:
         if char in ENCODING_MAPPING:
@@ -106,7 +106,7 @@ def main():
         except FileNotFoundError:#handles file not found errors
             logging.error("File not made yet")
             print("File not made yet please encode first")
-        except:#handles any unexpected errors and sends the type to the log.
+        except Exception:#handles any unexpected errors and sends the type to the log.
             logging.error("Unexpected error:", sys.exc_info()[0])
             print("An error has occurred.")
 
