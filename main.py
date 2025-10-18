@@ -18,7 +18,7 @@ The program returns:
 logging.basicConfig(filename="Encryption.log", level=logging.INFO,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 FILE = "output.txt"
 
-encoding_map = {
+ENCODING_MAPPING = {
         "A": 56, "B": 57, "C": 58, "D": 59, "E": 40, "F": 41, "G": 42, "H": 43, "I": 44,
         "J": 45, "K": 46, "L": 47, "M": 48, "N": 49, "O": 60, "P": 61, "Q": 62,
         "R": 63, "S": 64, "T": 65, "U": 66, "V": 67, "W": 68, "X": 69, "Y": 10,
@@ -31,7 +31,7 @@ encoding_map = {
 
 
 # Reverses the dictionary we used to encode
-decode_map = {v: k for k, v in encoding_map.items()}
+DECODE_MAP = {v: k for k, v in ENCODING_MAPPING.items()}
 def decoding():
     """
     Takes the message in 'output.txt' as input and prints the decrypted message.
@@ -49,8 +49,8 @@ def decoding():
             continue
         try:
             num_int = int(num_str)
-            if num_int in decode_map:
-                output += decode_map[num_int]
+            if num_int in DECODE_MAP:
+                output += DECODE_MAP[num_int]
             else:
                 output += "?"
         except ValueError:
@@ -78,8 +78,8 @@ def encoding(user_input):
             logging.warn("Empty text written in output.txt")
             return
     for char in user_input:
-        if char in encoding_map:
-            output.append(str(encoding_map[char]))
+        if char in ENCODING_MAPPING:
+            output.append(str(ENCODING_MAPPING[char]))
         else:
             output.append(char)
     encrypted_text = ','.join(output)

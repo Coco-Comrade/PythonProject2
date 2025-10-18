@@ -18,3 +18,6 @@
 2025-10-17 15:10:15,010 - root - ERROR - Invalid input
 2025-10-17 15:10:17,517 - root - INFO - Encrypted text written to output.txt
 2025-10-17 15:10:17,517 - root - INFO - encoding successful
+2025-10-18 19:28:09,115 - root - ERROR - Invalid input
+2025-10-18 19:28:11,261 - root - INFO - Encrypted text written to output.txt
+2025-10-18 19:28:11,261 - root - INFO - encoding successful
