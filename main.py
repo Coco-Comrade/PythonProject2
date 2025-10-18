@@ -30,7 +30,7 @@ encoding_map = {
 }
 
 
-# Reverses the dictionary we used to encode stuff
+# Reverses the dictionary we used to encode
 decode_map = {v: k for k, v in encoding_map.items()}
 def decoding():
     """
@@ -73,7 +73,7 @@ def encoding(user_input):
     """""
     output = []
     if user_input == "":
-        with open(FILE, "w", encoding="utf-8") as f:
+        with open(FILE, "w", encoding="utf-8") as f: #handles empty input
             f.write("")
             logging.warn("Empty text written in output.txt")
             return
@@ -95,22 +95,22 @@ def main():
         sys.exit()
     
     #sets the file
-    dec = sys.argv[1] # sets the mode
-    assert dec in ("Encrypt","Decrypt"), "Invalid input (must be Encrypt or Decrypt)"
+    user_decision = sys.argv[1] # sets the mode
+    assert user_decision in ("Encrypt","Decrypt"), "Invalid input (must be Encrypt or Decrypt)"
     logging.error("Invalid input")
-    if dec == "Decrypt":
+    if user_decision == "Decrypt":#checks if dec is equal to "Decrypt"
         try:
             decoding()
             logging.info("decoding successful")
             print("Decoded text written to output.txt")
-        except FileNotFoundError:
+        except FileNotFoundError:#handles file not found errors
             logging.error("File not made yet")
             print("File not made yet please encode first")
-        except:
+        except:#handles any unexpected errors and sends the type to the log.
             logging.error("Unexpected error:", sys.exc_info()[0])
             print("An error has occurred.")
 
-    if dec == "Encrypt":
+    if user_decision == "Encrypt":#checks if dec is equal to "Encrypt"
 
         print("What would you like to encrypt?")
         user_input = input()
