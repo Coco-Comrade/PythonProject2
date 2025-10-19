@@ -86,7 +86,7 @@ def encoding(user_input):
         else:
             print("Not a valid character entered")
             logging.error("Invalid character inputted")
-            sys.exit()
+            raise ValueError("Invalid character inputted")
 
     encrypted_text = ','.join(output)
 
